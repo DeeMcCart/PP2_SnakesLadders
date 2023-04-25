@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* body style */
+body {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 300;
+    color: #333;
+    /* line-height: 1.6; */
+}
+
+.navbar {
+    background-color: #047aed;
+    color: #fff;
+    height: 50x;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* heading and logo styles */
+h1,
+h2 {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #252525;
+    margin: 10px 0;
+}
+
+.header {
+    grid-area: hd;
+}
+
+#logo {
+    float: left;
+    font-size: 110%;
+    margin-left: 30px;
+}
+
+/* navigation links */
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+}
+
+#menu,
+#logo {
+    line-height: 50px;
+}
+
+#menu li {
+    float: right;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+    color: blue;
+}
+
+/* General styling for images */
+img {
+    width: 100%;
+}
+
+/* body styling grid format */
+body {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: "hd hd hd"
+        "lhside main rhside"
+        "foot foot foot";
+}
+
+.main-left {
+    grid-area: lhside;
+    background-color: beige
+}
+
+.main {
+    grid-area: main;
+    background-color: #047aed
+}
+
+.main-right {
+    grid-area: rhside;
+    background-color: aquamarine
+}
+
+/* Flexbox styling for map and walk IDs to appear in centre of screen */
+.mainmap {
+    grid-area: main;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Flexbox styling for walk ids to display around edges of container */
+.board-position {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 3px dotted blue;
+    background-color: yellow /*transparent*/;
+    padding: 0;
+    color: red;
+    font-size: 2rem;
+    font-weight: 900;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap-reverse;
+    align-content:flex-end;
+    /*justify-content: center;*/
+     
+
+/* Change display when hover over individual walks 
+.walk-id a:hover {
+    font-size: 90px;
+    } */
+
+/* Include specific styling for google map to pop it into the middle of its container and make it responsive*/
+.google-map {
+    grid-area: main;
+    padding-bottom: 70%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 80%;
+    width: 80%;
+    left: 10%;
+    top: 10%;
+    margin-right:10%;
+    position: absolute;
+}
+
+.bk-map {
+    background-image: url('https://www.google.com/maps/d/u/0/edit?mid=1jr5ZS0rgo1TDtELYrhRuqfZC8o3FQ54&usp=sharing')
+}
+
+/* Footer styling */
+footer {
+    grid-area: foot;
+    height: 150px;
+    background-color: black;
+}
+
+.partners {
+    text-align: center;
+}
+
+.partners li {
+    display: inline;
+}
+
+.partners i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #3a3a3a
+}
